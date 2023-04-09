@@ -767,4 +767,7 @@ video::-webkit-media-controls-time-remaining-display {
     margin-top: -1.9rem;
     margin-left: 3rem;
   }
+  .main-follow-buttons{
+    display: none;
+  }
 }
