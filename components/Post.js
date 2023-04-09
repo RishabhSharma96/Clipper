@@ -269,7 +269,7 @@ const Post = ({
                     </div>
                 </div>
 
-                <div className="lg:ml-20 flex gap-4 relative">
+                <div className="lg:ml-20 flex gap-4 relative justify-center container " >
                     <div
                         onMouseEnter={() => setIsHover(true)}
                         onMouseLeave={() => setIsHover(false)}
@@ -286,7 +286,7 @@ const Post = ({
                         </div>
 
                         {isHover && (
-                            <div className="mute   absolute bottom-6 cursor-pointer lg:left-0 flex justify-between w-[500px] mb-5  ml-10 ">
+                            <div className="mute   absolute bottom-6 cursor-pointer lg:left-0 flex justify-between w-[500px] mb-5  ml-40 ">
                                 {playing ? (
                                     <button onClick={onVideoPress}>
                                         <BsFillPauseFill className="text-black text-2xl lg:text-4xl" />
