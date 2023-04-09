@@ -207,14 +207,14 @@ const VideoDetail = ({
         if (video && video.includes("firebasestorage.googleapis.com")) {
             const chekerUrl = video.replace(
                 "firebasestorage.googleapis.com",
-                "clipper.com"
+                "therealclipper.com"
             );
             setVideoLink(chekerUrl);
         } else if (video && video.includes("drive.google.com")) {
-            const chekerUrl = video.replace("drive.google.com", "clipper.com");
+            const chekerUrl = video.replace("drive.google.com", "therealclipper.com");
             setVideoLink(chekerUrl);
         } else if (video && video.includes("mega.nz/embed")) {
-            const chekerUrl = video.replace("mega.nz/embed", "clipper.com");
+            const chekerUrl = video.replace("mega.nz/embed", "therealclipper.com");
             setVideoLink(chekerUrl);
         }
     }, [video]);
@@ -248,7 +248,10 @@ const VideoDetail = ({
         <>
             {videoId === id && (
                 <motion.div
-                    initial={{ opacity: 0 }}
+                    initial={{ opacity: 0, x: '-200vh' }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: '-200vh' }}
+                    transition={{ duration: 1 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     className="flex w-full absolute left-0 top-0 bg-white flex-wrap lg:flex-nowrap"
@@ -291,7 +294,12 @@ const VideoDetail = ({
                             )}
                         </div>
                     </div>
-                    <div className="relative w-[1000px] md:w-[900px] lg:w-[700px]">
+                    <motion.div className="relative w-[1000px] md:w-[900px] lg:w-[700px]  "
+                        initial={{ opacity: 0, y: '-200vh' }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: '-200vh' }}
+                        transition={{ duration: 1 }}
+                    >
                         <div className="lg:mt-20 mt-10">
                             <div
                                 className="flex gap-4 mb-4 bg-white w-full pl-10 cursor-pointer"
@@ -309,7 +317,7 @@ const VideoDetail = ({
                                     <div className="absolute flex ml-64 top-20 justify-end">
                                         <button
                                             type="button"
-                                            className="inline-block px-4 py-1.5 border border-pink-500 text-pink-500 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+                                            className="inline-block px-4 py-1.5 border border-pink-500 text-pink-500 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out ml-10"
                                         >
                                             Follow
                                         </button>
@@ -587,7 +595,7 @@ const VideoDetail = ({
                                     />
                                     {isCopied ? (
                                         <button className="text-xs text-center font-bold w-28 cursor-not-allowed">
-                                            Coppid!
+                                            Copied!
                                         </button>
                                     ) : (
                                         <motion.button
@@ -596,7 +604,7 @@ const VideoDetail = ({
                                             className="text-xs text-center cursor-pointer font-bold w-28"
                                             onClick={handleCopyClick}
                                         >
-                                            Coppy Link
+                                            Copy Link
                                         </motion.button>
                                     )}
                                 </div>
@@ -614,7 +622,7 @@ const VideoDetail = ({
                                 </div>
                             )}
                         </div>
-                    </div>
+                    </motion.div>
                 </motion.div >
             )}
         </>
