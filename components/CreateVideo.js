@@ -64,7 +64,7 @@ const CreateVideo = () => {
 
     const sendEmail = () => {
 
-        emailjs.send('service_4bx2ehb', 'template_oqqoe0g', templateParams, 'ohEOCF9HJxE8oNN3j')
+        emailjs.send(process.env.NEXT_PUBLIC_EMAIL_SERVICE, process.env.NEXT_PUBLIC_TEMPLATE_TOKEN, templateParams, process.env.NEXT_PUBLIC_EMAIL_TOKEN)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -120,10 +120,11 @@ const CreateVideo = () => {
             if (!caption) {
                 toast.error("Caption can't be empty", {
                     duration: 3000,
-                    position: "bottom-right",
+                    position: "top-right",
                     style: {
-                        background: "#fff",
-                        color: "#015871",
+                        backgroundColor: "#4d5dfb",
+                        backgroundImage: "linear-gradient(315deg, #4d5dfb 0%, #08c8f6 74%)",
+                        color: "azure",
                         fontWeight: "bolder",
                         fontSize: "17px",
                         padding: "20px",
@@ -132,10 +133,11 @@ const CreateVideo = () => {
             } else if (!tagCheck) {
                 toast.error("HashTag can't be empty", {
                     duration: 3000,
-                    position: "bottom-right",
+                    position: "top-right",
                     style: {
-                        background: "#fff",
-                        color: "#015871",
+                        backgroundColor: "#4d5dfb",
+                        backgroundImage: "linear-gradient(315deg, #4d5dfb 0%, #08c8f6 74%)",
+                        color: "azure",
                         fontWeight: "bolder",
                         fontSize: "17px",
                         padding: "20px",
@@ -144,10 +146,11 @@ const CreateVideo = () => {
             } else {
                 toast.error("Topic can't be empty", {
                     duration: 3000,
-                    position: "bottom-right",
+                    position: "top-right",
                     style: {
-                        background: "#fff",
-                        color: "#015871",
+                        backgroundColor: "#4d5dfb",
+                        backgroundImage: "linear-gradient(315deg, #4d5dfb 0%, #08c8f6 74%)",
+                        color: "azure",
                         fontWeight: "bolder",
                         fontSize: "17px",
                         padding: "20px",
