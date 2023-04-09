@@ -28,7 +28,7 @@ const Signin = () => {
             transition={{ duration: 1.2, delay: 0.4 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="h-screen bg-gradient-to-r from-pink-500  to-yellow-500 w-full py-36 px-4 bg-[url('../public/loginbanner2.jpg')] bg-no-repeat bg-cover "
+            className="h-screen w-full py-36 px-4 bg-[url('../public/loginbanner2.jpg')] bg-no-repeat bg-cover "
         >
             <Head>
                 <title>Clipper</title>
