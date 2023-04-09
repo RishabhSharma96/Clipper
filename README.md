@@ -31,3 +31,10 @@ Installation
 ```cd hackbyte-clipper```
 
 ```npm install```
+
+3. Set up your Firebase project configuration:
+Copy the environment variables contents to a new .env.local file in the project root, and replace the values with your Firebase project configuration.
+
+4.Run the development server:
+
+```npm run dev```
