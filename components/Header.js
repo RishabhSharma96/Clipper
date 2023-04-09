@@ -21,6 +21,7 @@ const Header = ({ isShow }) => {
 
     const logout = async () => {
         await signOut(auth);
+        router.push("/auth/signin")
     };
 
     return (
@@ -84,7 +85,14 @@ const Header = ({ isShow }) => {
                             {isShow && (
                                 <>
                                     {user && (
-                                        <button
+                                        <motion.button
+                                            animate={{ x: ['10px', '0px', '10px'] }}
+                                            transition={{
+                                                duration: 2,
+                                                repeat: Infinity,
+                                                delay: 1,
+                                                // repeatDelay: 1,
+                                            }}
                                             onClick={() => router.push("/pin/create")}
                                             type="button"
                                             className="flex items center text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2 shadow-lg"
@@ -104,7 +112,7 @@ const Header = ({ isShow }) => {
                                                 />
                                             </svg>
                                             Upload
-                                        </button>
+                                        </motion.button>
                                     )}
                                 </>
                             )}
