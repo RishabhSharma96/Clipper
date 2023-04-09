@@ -5,6 +5,7 @@ import { firestore } from "../firebase/firebase";
 import Post from "./Post";
 
 import Skeleton from "./Skeleton/Skeleton";
+import BeforeLogin from "./BeforeLogin";
 
 const RightHandSide = () => {
     const [posts, setPosts] = useState([]);
@@ -18,22 +19,28 @@ const RightHandSide = () => {
                     setPosts(snapshot.docs);
                 }
             ),
-        [firestore]
+        []
     );
+
 
     useEffect(() => {
         setTimeout(() => {
             if (posts) {
                 setIsShow(true);
+
             } else return;
         }, 3000);
     }, [posts]);
 
+
+
+    if (posts.length == 0)
+        return <><BeforeLogin /></>
+
+
     return (
         <motion.div
             className="right mt-4"
-
-
 
         >
             {isShow ? (

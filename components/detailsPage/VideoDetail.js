@@ -219,7 +219,7 @@ const VideoDetail = ({
         }
     }, [video]);
 
-    // This is the function we wrote earlier
+
     async function copyTextToClipboard(text) {
         if ("clipboard" in navigator) {
             return await navigator.clipboard.writeText(text);
@@ -228,12 +228,12 @@ const VideoDetail = ({
         }
     }
 
-    // onClick handler function for the copy button
+
     const handleCopyClick = () => {
-        // Asynchronously call copyTextToClipboard
+
         copyTextToClipboard(video)
             .then(() => {
-                // If successful, update the isCopied state value
+
                 setIsCopied(true);
                 setTimeout(() => {
                     setIsCopied(false);
