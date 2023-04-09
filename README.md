@@ -24,4 +24,10 @@ To run this project, you will need:
 Installation
 1. Clone this repository to your local machine:
 
-```git clone https://github.com/your-username/tiktok-clone.git```
+```git clone https://github.com/RishabhSharma96/hackbyte-clipper.git```
+
+2. Install the dependencies:
+
+```cd hackbyte-clipper```
+
+```npm install```
