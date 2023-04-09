@@ -9,13 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "autoprefixer": "10.4.14",
-    "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
-    "next": "13.3.0",
-    "postcss": "8.4.21",
+    "@emailjs/browser": "^3.11.0",
+    "@faker-js/faker": "^7.6.0",
+    "@zegocloud/zego-uikit-prebuilt": "^1.7.5",
+    "firebase": "^9.13.0",
+    "framer-motion": "^7.6.3",
+    "moment": "^2.29.4",
+    "next": "13.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.1"
+    "react-firebase-hooks": "^5.0.3",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.6.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-share": "^4.4.1",
+    "tailwind-scrollbar": "^2.0.1",
+    "tailwind-scrollbar-hide": "^1.1.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1"
   }
 }
