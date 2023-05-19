@@ -79,7 +79,7 @@ const Btns = () => {
                     <span>For You</span>
                 </a>
 
-                <Link href="/screen" className="flex gap-2" >
+                <Link href="" className="flex gap-2" >
                     <motion.svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
