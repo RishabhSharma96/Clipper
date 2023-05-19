@@ -57,7 +57,7 @@ const CreateVideo = () => {
     };
     var templateParams = {
         cat: topic,
-        email: user.email,
+        email: user?.email,
         name: songName,
         desc: caption
     };
